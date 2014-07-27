@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+$base__font-size: 15 !default;
+$base__line: 20 !default;
+$font__primary: 'Open Sans', sans-serif;
+h1{
+	width: 100%;
+	line-height: 400px;
+	text-align: center;
+	color: $color__primary--white;
+	position: absolute;
+}
+p{
+	color: $color__primary--dark;
+}

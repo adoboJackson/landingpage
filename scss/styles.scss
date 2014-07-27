@@ -1,0 +1,40 @@
+@import '_includes/_palette.scss';
+@import '_includes/_text.scss';
+
+body, html{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font__primary;
+}
+
+.container-main{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: stretch;
+	background: $color__primary--white;
+}
+
+.nav-social{
+
+}
+.nav-internal{
+
+}
+.container-hero{
+	height: 400px;
+ 	background-image: url(http://placekitten.com/2048/400);
+ 	width: 100%;
+}
+.container-main__textholder{
+	flex-grow: 2;
+	width: 200px;
+}
+.container-main__sidebar--right{
+	flex-grow: 1;
+	width: 100px;
+}
+.container-main__sidebar--left{
+	flex-grow: 1;
+	width: 100px;
+}
