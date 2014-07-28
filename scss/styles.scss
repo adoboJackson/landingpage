@@ -1,5 +1,7 @@
 @import '_includes/_palette.scss';
 @import '_includes/_text.scss';
+$depth__nav: 1000;
+$social__unit: 95;
 
 body, html{
 	margin:0;
@@ -16,10 +18,43 @@ body, html{
 }
 
 .nav-social{
+	position: fixed;
+	left: 0;
+	top: 20px;
+	width: 100px;
+	background: $color__primary--white;
+	z-index: $depth__nav;
+	a{
+		width: 100px;
+		height: 70px;
+		display: block;
+		background-image: url(../img/socials.png);
+		&.pinterest{
+			background-position: 0 -18px;
+		}
+		&.googleplus{
+			background-position: 0 (#{(-18 - ($social__unit))}px);
+		}
+		&.twitter{
+			background-position: 0 (#{(-18 - (2 * $social__unit))}px);
+		}
+		&.facebook{
+			background-position: 0 (#{(-18 - (3 * $social__unit))}px);
+		}
+		&.comments{
+			background-position: 0 (#{(-18 - (4 * $social__unit))}px);
+		}
+	}
 
 }
 .nav-internal{
-
+	position: fixed;
+	width: 200px;
+	height: 100px;
+	background: rgba(0,0,0,.5);
+	right: 5px;
+	top: 20px;
+	z-index: $depth__nav;
 }
 .container-hero{
 	height: 400px;
