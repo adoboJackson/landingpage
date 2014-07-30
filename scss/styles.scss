@@ -15,9 +15,9 @@ $social__list: pinterest googleplus twitter facebook comments;
 	transform: translate(-100px, -100px) rotate(0deg);
 	opacity: 0;
 }
-#svg--leaf{
-	fill: white;
-}
+// #svg--leaf{
+// 	fill: white;
+// }
 
 body, html{
 	height: 100%;
@@ -42,7 +42,6 @@ li{
 	align-items: stretch;
 	background: $color__primary--white;
 }
-
 
 .nav-social{
 	position: fixed;

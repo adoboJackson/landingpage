@@ -71,6 +71,22 @@ p {
     opacity: 1;
   }
 }
+.animated__leaf--falling {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 200px;
+  top: 400px;
+  -webkit-transform: translate(-100px, -400px) rotate(0deg);
+  -ms-transform: translate(-100px, -400px) rotate(0deg);
+  transform: translate(-100px, -400px) rotate(0deg);
+}
+
+.come-in.animated__leaf--falling {
+  -webkit-animation: leafdrop 1s ease 1 forwards, leafspin 1s ease 1 forwards;
+  animation: leafdrop 1s ease 1 forwards, leafspin 1s ease 1 forwards;
+}
+
 .animated__leaf {
   position: absolute;
   width: 100px;
@@ -81,10 +97,6 @@ p {
   -ms-transform: translate(-100px, -100px) rotate(0deg);
   transform: translate(-100px, -100px) rotate(0deg);
   opacity: 0;
-}
-
-#svg--leaf {
-  fill: white;
 }
 
 body, html {
