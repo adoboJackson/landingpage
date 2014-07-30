@@ -1,26 +1,124 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+h1, h2 {
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   width: 100%;
-  line-height: 400px;
+  line-height: 978px;
   text-align: center;
   color: white;
   position: absolute;
 }
 
+h2 {
+  font-size: 60px;
+  font-weight: normal;
+  width: 60%;
+  position: absolute;
+  right: 20px;
+  background: white;
+}
+
+h2.chapter-header {
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  right: 0;
+  left: 0;
+  -webkit-transition: background 2s 1s ease;
+  transition: background 2s 1s ease;
+}
+
+h2.chapter-header.come-in {
+  background: #3c85c4;
+}
+
 p {
-  color: #990000;
+  color: #333333;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.come-in.animated__leaf {
+  -webkit-animation: leafdrop 1s 1s ease 1 forwards, leafspin 1s 1s ease 1 forwards;
+  animation: leafdrop 1s 1s ease 1 forwards, leafspin 1s 1s ease 1 forwards;
+}
+
+@-webkit-keyframes leafdrop {
+  to {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes leafdrop {
+  to {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+@-webkit-keyframes leafspin {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes leafspin {
+  to {
+    opacity: 1;
+  }
+}
+.animated__leaf {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 200px;
+  -webkit-transform: translate(-100px, -100px) rotate(0deg);
+  -ms-transform: translate(-100px, -100px) rotate(0deg);
+  transform: translate(-100px, -100px) rotate(0deg);
+  opacity: 0;
+}
+
+#svg--leaf {
+  fill: white;
 }
 
 body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
 .container-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   background: white;
 }
@@ -28,31 +126,32 @@ body, html {
 .nav-social {
   position: fixed;
   left: 0;
-  top: 20px;
+  top: 0;
   width: 100px;
+  padding: 20px 0;
   background: white;
   z-index: 1000;
+}
+.nav-social--pinterest {
+  background-position: 0 -18px;
+}
+.nav-social--googleplus {
+  background-position: 0 -113px;
+}
+.nav-social--twitter {
+  background-position: 0 -208px;
+}
+.nav-social--facebook {
+  background-position: 0 -303px;
+}
+.nav-social--comments {
+  background-position: 0 -398px;
 }
 .nav-social a {
   width: 100px;
   height: 70px;
   display: block;
   background-image: url(../img/socials.png);
-}
-.nav-social a.pinterest {
-  background-position: 0 -18px;
-}
-.nav-social a.googleplus {
-  background-position: 0 -113px;
-}
-.nav-social a.twitter {
-  background-position: 0 -208px;
-}
-.nav-social a.facebook {
-  background-position: 0 -303px;
-}
-.nav-social a.comments {
-  background-position: 0 -398px;
 }
 
 .nav-internal {
@@ -64,24 +163,71 @@ body, html {
   top: 20px;
   z-index: 1000;
 }
+.nav-internal h3 {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+.nav-internal ul {
+  font-size: 0;
+  text-align: center;
+  padding: 5px;
+}
+.nav-internal li {
+  display: inline-block;
+}
+.nav-internal a {
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  background: white;
+  border-radius: 100%;
+  display: block;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.nav-internal a:hover {
+  background: #e5c37d;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
 
 .container-hero {
-  height: 400px;
-  background-image: url(http://placekitten.com/2048/400);
+  height: 978px;
+  background-image: url(../img/hero-bg.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
   width: 100%;
 }
 
+.subheader-section {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin-top: -30px;
+}
+
 .container-main__textholder {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
   flex-grow: 2;
   width: 200px;
 }
 
 .container-main__sidebar--right {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   width: 100px;
 }
 
 .container-main__sidebar--left {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   width: 100px;
 }

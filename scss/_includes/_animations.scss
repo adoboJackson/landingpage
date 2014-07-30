@@ -1,0 +1,11 @@
+.come-in.animated__leaf{
+	animation:	leafdrop 1s 1s ease 1 forwards,
+				leafspin 1s 1s ease 1 forwards;
+}
+
+@keyframes leafdrop{
+	to{transform: translate(0,0) rotate(360deg)}
+}
+@keyframes leafspin{
+	to{opacity: 1}
+}
